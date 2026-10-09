@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колодищи — агрогородок-город | История, достопримечательности, новости</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.7;
+            color: #2d3e50;
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            padding: 40px 45px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            color: #1a4d5e;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            border-left: 8px solid #4a9eb8;
+            padding-left: 25px;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: #5a6f7e;
+            margin-bottom: 25px;
+            padding-left: 33px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #1a4d5e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px dashed #b6d4e0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #2c6b7e;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        hr {
+            margin: 45px 0 30px;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #b6d4e0, #ffffff);
+        }
+
+        /* === ФОТО === */
+        .photo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 30, 50, 0.15);
+            margin: 22px auto;
+            border: 4px solid #ffffff;
+        }
+
+        .photo-caption {
+            display: block;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #3e5a6b;
+            background: rgba(217, 233, 240, 0.6);
+            padding: 8px 22px;
+            border-radius: 30px;
+            margin: -12px auto 25px auto;
+            font-style: italic;
+            max-width: 80%;
+        }
+
+        .photo-wrapper {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        /* === АКЦЕНТНЫЕ ЭЛЕМЕНТЫ === */
+        .highlight {
+            background: linear-gradient(120deg, #fff3cd 0%, #fff3cd 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+            font-weight: 600;
+        }
+
+        .fact-box {
+            background: #eef7fb;
+            border-left: 6px solid #4a9eb8;
+            border-radius: 0 16px 16px 0;
+            padding: 18px 22px;
+            margin: 22px 0;
+            font-size: 1.02rem;
+        }
+
+        .fact-box strong {
+            color: #1a4d5e;
+        }
+
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            margin: 25px 0;
+        }
+
+        .timeline li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 22px;
+        }
+
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            background: #4a9eb8;
+            border-radius: 50%;
+            border: 3px solid #d9e9f0;
+        }
+
+        .timeline li::after {
+            content: "";
+            position: absolute;
+            left: 17px;
+            top: 28px;
+            bottom: -18px;
+            width: 2px;
+            background: #d9e9f0;
+        }
+
+        .timeline li:last-child::after {
+            display: none;
+        }
+
+        .timeline .year {
+            display: inline-block;
+            background: #1a4d5e;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .hero-person {
+            background: #fdf6e3;
+            border: 2px solid #f0d89a;
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin: 25px 0;
+        }
+
+        .hero-person h4 {
+            color: #8a6d1a;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        /* Карта */
+        .map-wrapper {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        /* Новости */
+        .news-item {
+            background: #f9fcfe;
+            border-left: 6px solid #4a9eb8;
+            padding: 18px 25px;
+            margin-bottom: 30px;
+            border-radius: 0 16px 16px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .news-item h3 {
+            margin-top: 0;
+            color: #1a4d5e;
+            font-size: 1.3rem;
+        }
+
+        .news-meta {
+            font-size: 0.9rem;
+            color: #6b8a99;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .news-item ul {
+            margin-top: 10px;
+        }
+
+        a {
+            color: #2c6b7e;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #b6d4e0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0e3b4a;
+            border-bottom-color: #1a4d5e;
+        }
+
+        /* Город сейчас — карточки */
+        .economy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .economy-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 22px 20px;
+            box-shadow: 0 8px 20px rgba(0, 30, 40, 0.06);
+            border: 1px solid #d9e9f0;
+            transition: box-shadow 0.2s;
+        }
+
+        .economy-card:hover {
+            box-shadow: 0 12px 28px rgba(0, 60, 80, 0.12);
+        }
+
+        .economy-card h4 {
+            font-size: 1.15rem;
+            color: #1a4d5e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .economy-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Символы */
+        .symbol-block {
+            background: #f2f9fc;
+            border-radius: 24px;
+            padding: 25px 30px;
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .symbol-text {
+            flex: 2;
+            min-width: 250px;
+        }
+
+        .symbol-visual {
+            flex: 1;
+            min-width: 180px;
+            background: linear-gradient(135deg, #b6d4e0, #d9e9f0);
+            border-radius: 20px;
+            padding: 30px 15px;
+            text-align: center;
+            font-size: 2.2rem;
+            border: 3px solid white;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+
+        .symbol-visual .caption {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #d9e9f0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6b8a99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ЗАГОЛОВОК -->
+        <h1>Колодищи</h1>
+        <div class="subhead">Агрогородок, который стал городом: история, люди, достижения</div>
+
+        <!-- ========== 1. ИСТОРИЯ ========== -->
+        <section>
+            <h2>1. История города</h2>
+
+            <p><span class="highlight">Основание Колодищ относится ко второй половине XIX века.</span> В то время здесь были густые, изобиловавшие зверем и птицей леса.</p>
+
+            <div class="fact-box">
+                <strong>1867 год.</strong> Сюда были направлены лесниками жители деревни Берёзовка — два брата <strong>Илья и Михаил Карповичи</strong>. Они считаются основателями Колодищ.
+            </div>
+
+            <p>В <strong>1871 году</strong> закончено строительство железной дороги <em>Москва — Брест</em> и построена <strong>станция Колодищи</strong>. После появления железной дороги жизнь изменилась — был построен небольшой лесопильный завод и проведена узкоколейная дорога.</p>
+
+            <p>В <strong>1910 году</strong> завод принадлежал Кляжину. Многие жители Колодищ работали на нём.</p>
+
+            <h3>Ключевые вехи XX века</h3>
+            <ul class="timeline">
+                <li>
+                    <span class="year">1917</span>
+                    <p>Построен военный городок, разместилась воинская часть по обучению собак для пограничной службы. Построена железнодорожная ветка <strong>Колодищи — Михановичи</strong>.</p>
+                </li>
+                <li>
+                    <span class="year">1917</span>
+                    <p>В бывшем помещичьем доме Анисова открыли <strong>амбулаторию</strong>, затем построена начальная школа (первая учительница — <em>Крицкая Елена Васильевна</em>). Организованы кружки ликбеза.</p>
+                </li>
+                <li>
+                    <span class="year">1933</span>
+                    <p>Начальная школа преобразована в <strong>семилетнюю</strong>.</p>
+                </li>
+                <li>
+                    <span class="year">1936</span>
+                    <p>Школа стала <strong>средней</strong>. Её учениками были лётчик Карпович Викентий Павлович, партизаны — Панасюк Владимир Лаврентьевич, Глазунов Владимир Кузьмич, Эрдман Сигизмунд и другие.</p>
+                </li>
+            </ul>
+
+            <div class="hero-person">
+                <h4>🎖 Герой Советского Союза — Карпович Викентий Павлович</h4>
+                <p>Родился в <strong>1914 году</strong> в крестьянской семье. В годы Великой Отечественной войны был командиром звена 16 и 20 Гвардейского истребительного авиационного полка. В первый год войны совершил <strong>256 самолётовылетов</strong>.</p>
+                <p>За мужество и отвагу, проявленные в боях с немецкими захватчиками, Президиум Верховного совета СССР указом от <strong>06.06.1942</strong> присвоил Карповичу В. П. звание <strong>Героя Советского Союза</strong>.</p>
+            </div>
+
+            <p>Фашисты нанесли Колодищам большой материальный ущерб. <span class="highlight">Полностью был разгромлен Белорусский республиканский радиоцентр, сожжена школа и станция.</span></p>
+
+            <div class="fact-box">
+                <strong>1947 год.</strong> Восстановлен Белорусский республиканский радиоцентр и колхоз «Победа». Колодищи преобразованы в рабочий посёлок.
+            </div>
+
+            <p>В конце <strong>1950-х годов</strong> построены типовая средняя школа с гимнастическим залом, клуб и детский сад.</p>
+
+            <p>В <strong>1961 году</strong> здесь разместилось Геофизическое управление по добыче и поискам нефти в Беларуси. В <strong>1967 году</strong> управление геофизики преобразовано в трест (в Колодищах проживало более 5 тыс. человек).</p>
+
+            <div class="fact-box">
+                <strong>1970 год.</strong> В Колодищах построили <strong>Белорусский телевизионный центр</strong>. В эфир вышла третья программа Белорусского телевидения. Мощность передающих передатчиков — 5/1,5 кВт. Ровно через год началась трансляция 1 и 2 программ, мощностью 25/7,5 кВт.
+            </div>
+
+            <p>В <strong>1977 году</strong> в Колодищах проживало <strong>10 тысяч человек</strong>, построен «Дом быта» и торговый центр.</p>
+
+            <p>В <strong>2008 году</strong>, после более чем десятилетнего перерыва, начато строительство нескольких многоквартирных домов. По словам председателя сельсовета, в дальнейшем планируется продолжать жилищное строительство и в других местах посёлка.</p>
+
+            <!-- ФОТО: история -->
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\history.jpg"
+                     alt="Историческое фото станции Колодищи"
+                     title="Станция Колодищи, начало XX века"
+                     width="700" height="450"
+                     class="photo">
+                <span class="photo-caption">Станция Колодищи, начало XX века</span>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ========== 2. ДОСТОПРИМЕЧАТЕЛЬНОСТИ ========== -->
+        <section>
+            <h2>2. Достопримечательности</h2>
+            <p>Колодищи — место, где история встречается с современностью. Вот главные точки притяжения:</p>
+
+            <h3>📡 Колодищанская телемачта</h3>
+            <p>Высокое сооружение высотой <strong>350 метров</strong> (выше Эйфелевой башни), построенное в 1930-х годах как радиоцентр.</p>
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\tower.jpg"
+                     alt="Колодищанская телемачта"
+                     title="Телемачта высотой 350 метров"
+                     width="700" height="900"
+                     class="photo">
+                <span class="photo-caption">Телемачта в Колодищах (350 м)</span>
+            </div>
+
+            <h3>🚂 Станция Колодищи</h3>
+            <p>Историческая железнодорожная станция, открытая в <strong>1871 году</strong>, с которой началась современная история посёлка.</p>
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\station.jpg"
+                     alt="Железнодорожная станция Колодищи"
+                     title="Станция Колодищи"
+                     width="700" height="450"
+                     class="photo">
+                <span class="photo-caption">Железнодорожная станция Колодищи</span>
+            </div>
+
+            <h3>🌲 Природные объекты и экотропы</h3>
+            <p>Местные леса и заказники популярны для прогулок. На краеведческом портале «Колодищи Инфо» собраны схемы пеших и веломаршрутов (например, <em>«Колодищи-Водопой»</em> или <em>«Колодищи-Городище»</em>) к живописным лесным озёрам, двойным сказочным дубам и реке Волма.</p>
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\forest.jpg"
+                     alt="Лесные озёра и экотропы Колодищ"
+                     title="Природные объекты Колодищ"
+                     width="700" height="450"
+                     class="photo">
+                <span class="photo-caption">Леса Колодищ</span>
+            </div>
+
+            <h3>⛪ Храмы</h3>
+            <p>В агрогородке действуют <strong>Храм преподобного Феодора Острожского</strong>, <strong>Церковь Вознесения Господня</strong> и баптистская церковь.</p>
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\church.jpg"
+                     alt="Храм преподобного Феодора Острожского"
+                     title="Храм преподобного Феодора Острожского"
+                     width="700" height="500"
+                     class="photo">
+                <span class="photo-caption">Храм преподобного Феодора Острожского</span>
+            </div>
+
+            <div class="fact-box">
+                <strong>🗺 Интерактивная карта.</strong> Посмотреть точное расположение новых природных находок и памятных точек можно на <a href="https://kolodischi.by/news?cat_id=35">Карте интересных мест Колодищ</a>.
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ========== 3. СИМВОЛЫ ========== -->
+        <section>
+            <h2>3. Символы города</h2>
+            <div class="symbol-block">
+                <div class="symbol-text">
+                    <p>В гербе Колодищ изображено <strong>железнодорожное полотно</strong>, <strong>здание станции</strong> и <strong>телевышка</strong>.</p>
+                    <p>Дело в том, что посёлок возник как железнодорожная станция на линии «Москва-Брест», в Колодищах располагался Белорусский Республиканский Радиоцентр (разрушен во время войны), а в 1970 году построен Белорусский Телевизионный Центр, откуда вещает Белорусское телевидение.</p>
+                    <p>Эти три элемента — рельсы, станция и мачта — как символы связи, движения и информации, лежат в основе неофициальной символики агрогородка.</p>
+                </div>
+                
+            <!-- ФОТО: герб -->
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\gerb.png"
+                     alt="Герб Колодищ"
+                     title="Неофициальный герб Колодищ"
+                     width="300" height="300"
+                     class="photo">
+                <span class="photo-caption">Герб Колодищ</span>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ========== 4. КАРТА ========== -->
+        <section>
+            <h2>4. Расположение на карте</h2>
+            <p>Колодищи граничат со столицей и являются мощным промышленно-логистическим узлом Минской агломерации.</p>
+            <!-- КАРТА -->
+            <div class="map-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\map.png"
+                     alt="Карта Колодищ и окрестностей"
+                     title="Расположение Колодищ на карте"
+                     width="900" height="600"
+                     class="photo">
+                <span class="photo-caption">Карта Колодищ </span>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ========== 5. НОВОСТИ ========== -->
+        <section>
+            <h2>5. Новости</h2>
+            <p>Актуальные новости агрогородка Колодищи и окрестностей (начало октября 2026 года) можно узнать на портале <a href="https://kolodischi.by/news" target="_blank" rel="noopener">Колодищи Инфо</a>.</p>
+
+            <div class="news-item">
+                <h3>Число подписчиков чата «Колодищи Инфо» в Телеграм приблизилось к 9 тысячам человек</h3>
+                <div class="news-meta">
+                    <span>👤 Василий Городило</span>
+                    <span>👁️ 1296</span>
+                    <span>💬 0</span>
+                    <span>❤️ 5</span>
+                </div>
+                <p>В группе чатов «Форум Колодищи Инфо» в Telegram состоит уже <strong>почти 9 тысяч человек</strong>. И их количество медленно, но уверенно продолжает увеличиваться.</p>
+                <p>Группа включает <strong>11 чатов</strong> по различным тематикам: «Сад и огород», «Обстановка на дорогах», «Домашние питомцы», «Бюро находок» и другие. Еженедельно в группе появляется около <strong>2000 новых сообщений</strong>, каждое из которых в среднем просматривает 500 человек.</p>
+                <p>Группа была образована почти 4 года назад — в <strong>ноябре 2022 года</strong>.</p>
+                <p>Подписаться можно по ссылке — <a href="https://t.me/kolodischi_forum" target="_blank" rel="noopener">https://t.me/kolodischi_forum</a>.</p>
+            </div>
+
+            <div class="news-item">
+                <h3>В воскресенье, 4 октября, в Колодищах работает ярмарка продукции фермеров</h3>
+                <div class="news-meta">
+                    <span>🍎 Ярмарка</span>
+                    <span>📍 ул. Минская, 5а</span>
+                </div>
+                <p>Торговля размещается на площадке по ул. Минская, 5а (справа от магазина Белмаркет) в период времени <strong>с 10.00 до 15.00</strong>.</p>
+                <p>Сегодня продавцов не очень много, но основные и самые востребованные продукты есть в продаже.</p>
+                <p><strong>Фото с ярмарки:</strong></p>
+                <ul>
+                    <li>Яблоки сладкие (проверено) по <strong>2,3 рубля</strong></li>
+                    <li>Шикарные на вкус груши по <strong>7 рублей</strong></li>
+                    <li>Капуста по <strong>1,7 рубля</strong> за кг</li>
+                    <li>Молочная продукция</li>
+                    <li>Работает три точки с мясной продукцией</li>
+                    <li>Есть пирожки с капустой по <strong>2 рубля</strong> (приготовлены в 23.00, ещё свежие)</li>
+                    <li>Яйца по <strong>5 и по 6 рублей</strong> за десяток, в зависимости от размера</li>
+                    <li>Кукуруза по <strong>3,5 рубля</strong> за кг</li>
+                    <li>Вкуснейший колодищанский виноград (опробовано, сладкий)</li>
+                    <li>Точка с мёдом</li>
+                </ul>
+                <div class="photo-wrapper">
+                    <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\fair.jpg"
+                         alt="Фото с ярмарки в Колодищах"
+                         title="Ярмарка в Колодищах"
+                         width="700" height="450"
+                         class="photo">
+                    <span class="photo-caption">Фото с ярмарки в Колодищах</span>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>В Колодищанской поликлинике проводится бесплатная вакцинация против ВПЧ</h3>
+                <div class="news-meta">
+                    <span>🏥 Здоровье</span>
+                    <span>👁️ 958</span>
+                    <span>💬 1</span>
+                </div>
+                <p><strong>Объявление от администрации Колодищанской поликлиники:</strong></p>
+                <p>Уважаемые родители девочек 2015 года рождения, которым уже исполнилось 11 лет. В Колодищанской поликлинике активно проводится плановая бесплатная вакцинация против вируса папилломы человека (ВПЧ) препаратом «Цеколин».</p>
+                <p><strong>Почему это важно?</strong></p>
+                <ul>
+                    <li><strong>Защита от рака:</strong> Вакцинация защищает от онкогенных 16 и 18 типов ВПЧ, предотвращая развитие опасных онкологических заболеваний в будущем.</li>
+                    <li><strong>Максимальный эффект:</strong> В 11 лет иммунная система ребёнка реагирует лучше всего. Полный курс состоит всего из 2 доз. Вторая — через 6 месяцев.</li>
+                </ul>
+                <p>Вакцинация проводится с согласия родителей и после осмотра врача-педиатра. Позаботьтесь о будущем здоровье ваших дочерей.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ========== 6. ГОРОД СЕЙЧАС ========== -->
+        <section>
+            <h2>6. Город сейчас</h2>
+            <p>Официально Колодищи имеют статус <strong>агрогородка</strong> (крупнейшего в Минском районе), однако по численности населения (<strong>около 21 400 — 23 900 человек</strong>) и уровню инфраструктуры он сопоставим с полноценным городом. Гранича со столицей, Колодищи выступают как мощный промышленно-логистический узел Минской агломерации.</p>
+
+            <h3>🏭 Экономика и промышленность</h3>
+            <p>Основу местной экономики составляет частный сектор, производство строительных материалов, металлообработка, пищевая промышленность и логистика. В Колодищах функционирует <strong>около тысячи субъектов хозяйствования</strong> (включая развитый Бизнес-инкубатор).</p>
+
+            <div class="economy-grid">
+                <div class="economy-card">
+                    <h4>🍟 Пищевая отрасль</h4>
+                    <p>ООО «Онега» — крупнейший производитель чипсов и снеков в стране.</p>
+                </div>
+                <div class="economy-card">
+                    <h4>🧱 Стройматериалы и кровля</h4>
+                    <p>«АЛЬТЕРстрим», «Деке», «Старый любимый двор» (тротуарная плитка), «ЭталонБетон».</p>
+                </div>
+                <div class="economy-card">
+                    <h4>⚙️ Металлообработка</h4>
+                    <p>«Стальбокс», «ТрастСталь», «Алюртех».</p>
+                </div>
+                <div class="economy-card">
+                    <h4>🔌 Оборудование и инновации</h4>
+                    <p>Завод трансформаторных подстанций, АСД-Техника (высокоточное дозирующее оборудование), «Клэр» (медицинская техника).</p>
+                </div>
+                <div class="economy-card">
+                    <h4>📡 Связь и геодезия</h4>
+                    <p>Республиканский радиотелецентр (знаменитая телевышка) и Центральная геофизическая экспедиция.</p>
+                </div>
+            </div>
+
+            <h3>🛠 Сфера услуг</h3>
+            <p>Инфраструктура услуг стремительно догоняет столичный уровень. Жителям доступны:</p>
+            <ul>
+                <li><strong>Торговля:</strong> Крупные сетевые супермаркеты («Евроопт», «Копеечка», «Санта»), строительные магазины, аптечные сети и специализированные павильоны.</li>
+                <li><strong>Бытовые и строительные услуги:</strong> Широко развита сфера локальных услуг — от ремонта автомобилей (СТО), металлоконструкций под заказ и аренды спецтехники до салонов красоты и студий дизайна.</li>
+                <li><strong>Строительный бум и развитие:</strong> На территории Колодищ развернулись современные премиальные жилые комплексы (например, «Зелёная Гавань»). С 2026 года в районе бывшего полигона стартовало масштабное строительство нового столичного микрорайона «Зелёный Бор», что ещё сильнее расширяет местную торгово-сервисную сеть.</li>
+            </ul>
+
+            <h3>🏥 Социальные объекты</h3>
+            <ul>
+                <li>Колодищанская поликлиника (филиал Минской ЦРБ);</li>
+                <li>2 общеобразовательные школы и 4 детских сада;</li>
+                <li>Пожарная аварийно-спасательная часть (МЧС), Боровлянский отдел милиции, банковские отделения и почта.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- ========== 7. КРЕАТИВ ========== -->
+        <section>
+            <h2>7. Колодищи — место силы и вдохновения</h2>
+            <p>Колодищи — это удивительный пример того, как небольшая железнодорожная станция превратилась в динамично развивающийся агрогородок с городским размахом.</p>
+            <p>Здесь есть всё: от вековых сосновых лесов и тихих озёр до современной телевышки, транслирующей сигнал на всю страну.</p>
+            <p>Местные жители гордятся своей историей и активно участвуют в жизни посёлка. Благодаря таким инициативам, как «Колодищи Инфо», сообщество растёт и объединяется — <strong>почти 9 тысяч человек</strong> в Telegram-чатах обсуждают сад и огород, дорожную обстановку, домашних питомцев и просто помогают друг другу.</p>
+
+            <!-- ФОТО: закат -->
+            <div class="photo-wrapper">
+                <img src="C:\Users\admin\Documents\5 семестр лабы и практики\WD\sunset.jpg"
+                     alt="Закат над Колодищами"
+                     title="Закат над Колодищами"
+                     width="900" height="500"
+                     class="photo">
+                <span class="photo-caption">Любимый агрогородок</span>
+            </div>
+
+           <footer>
+            <p>© 2026 Колодищи. Страница создана с любовью к родному краю. </p>
+            <p>Ссылки: <a href="https://kolodischi.by/news" target="_blank" rel="noopener">Колодищи Инфо</a> · <a href="https://t.me/kolodischi_forum" target="_blank" rel="noopener">Telegram-форум</a></p>
+        </footer>
+    </div>
+</body>
+</html>
